@@ -21,6 +21,7 @@ export const CreateCurrency = () => {
       const user = JSON.parse(userString)
       if (user.type !== UserType.Editor) navigate('/')
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleSubmit = async (e: FormEvent) => {

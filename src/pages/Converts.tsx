@@ -21,6 +21,7 @@ export const Converts = () => {
     if (!user) navigate('/auth')
 
     getCurrencies()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const getConvert = async () => {

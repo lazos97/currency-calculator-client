@@ -19,6 +19,7 @@ export const Currensies = () => {
       getCurrencies()
       setUser(JSON.parse(userString))
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reRenderComponent])
 
   const getCurrencies = async () => {

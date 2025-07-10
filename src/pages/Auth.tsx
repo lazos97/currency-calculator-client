@@ -11,6 +11,7 @@ export const Auth = () => {
   useEffect(() => {
     const user = localStorage.getItem('user')
     if (user) navigate('/')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
