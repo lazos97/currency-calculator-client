@@ -46,6 +46,7 @@ export const Register = ({ setShowForm }: IAuthFormsProps) => {
       }, 3000)
 
       localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('token', JSON.stringify(user.token))
 
       setTimeout(() => {
         navigate('/')

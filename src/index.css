@@ -24,3 +24,8 @@ body {
 .navbar {
   padding: 10px;
 }
+
+.form-text,
+.text-muted {
+  color: rgb(219, 218, 218) !important;
+}

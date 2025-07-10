@@ -56,7 +56,7 @@ export const Converts = () => {
 
       setSuccess(
         `${amount} of ${fromCurrency} to ${toCurrency} are ${res.result.toFixed(
-          3
+          2
         )}`
       )
 

@@ -16,34 +16,31 @@ export const Home = () => {
           Καλωσήρθες στο Currency Calculator
         </h1>
         <p className="lead mb-4">
-          Η εφαρμογή σου για γρήγορη και εύκολη μετατροπή νομισμάτων.
-          Παρακολούθησε τιμές, δες διαθεσιμότητα και κάνε μετατροπές σε
-          πραγματικό χρόνο.
+          Your app for quick and easy currency conversion. Track rates and
+          make real-time conversions.
         </p>
         <div className="d-flex justify-content-center gap-3 mt-4">
           <Link to="/currencies" className="btn btn-primary btn-lg">
-            Δες Νομίσματα
+            View Currencies
           </Link>
           <Link
             to="/converts"
             className="btn btn-outline-secondary btn-lg"
           >
-            Μετατροπές
+            Conversions
           </Link>
         </div>
       </div>
 
       <div className="row mt-5">
         <div className="col-md-4 text-center">
-          <h3>💱 Μετατροπές</h3>
-          <p>Μετατροπή μεταξύ διαφόρων νομισμάτων άμεσα και εύκολα.</p>
+          <h3>💱 Conversions</h3>
+          <p>Instant and easy conversion between various currencies.</p>
         </div>
 
         <div className="col-md-4 text-center">
-          <h3>🔒 Ασφάλεια</h3>
-          <p>
-            Τα δεδομένα σου φυλάσσονται τοπικά για μεγαλύτερη ιδιωτικότητα.
-          </p>
+          <h3>🔒 Security</h3>
+          <p>Your data is stored locally for greater privacy.</p>
         </div>
       </div>
     </div>
