@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation
+} from 'react-router-dom'
+import { Home } from './pages/Home'
+import { Auth } from './pages/Auth'
+import { NavBar } from './components/NavBar'
+import { NotFound } from './components/NotFound'
+import { Currensies } from './pages/Currencies'
+import { Converts } from './pages/Converts'
+import { CreateCurrency } from './pages/CreateCurrency'
+import { UpdateCurrency } from './pages/UpdateCurrency'
 
-function App() {
+const AppContent = () => {
+  const location = useLocation()
+  const showNav = location.pathname !== '/auth'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {showNav && <NavBar />}
+      <div className="w-100 d-flex justify-content-center">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/currencies" element={<Currensies />} />
+          <Route path="/converts" element={<Converts />} />
+          <Route path="/create" element={<CreateCurrency />} />
+          <Route path="/update/:id" element={<UpdateCurrency />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </>
+  )
 }
 
-export default App;
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  )
+}
+
+export default App
