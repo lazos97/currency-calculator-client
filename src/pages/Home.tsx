@@ -12,9 +12,7 @@ export const Home = () => {
   return (
     <div className="container mt-5">
       <div className="text-center">
-        <h1 className="display-4 mb-3">
-          Καλωσήρθες στο Currency Calculator
-        </h1>
+        <h1 className="display-4 mb-3">Welcome To Currency Calculator</h1>
         <p className="lead mb-4">
           Your app for quick and easy currency conversion. Track rates and
           make real-time conversions.
